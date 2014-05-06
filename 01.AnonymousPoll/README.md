@@ -1,4 +1,4 @@
-##Challenge 1 - Anonymous Poll
+###Challenge 1 - Anonymous Poll
 
 Your university wants you to fill out an “anonymous” survey. There are many questions but some fields are mandatory:
 
@@ -15,12 +15,12 @@ name2,gender2,age2,studies2,academic_year2
 ...
 The gender can be “M” (male) or “F” (female).
 
-###Input
+#####Input
 
 Input starts with a number “T” (T <= 100) followed by “T” cases. Each case is a list of comma-separated values, which are:
 
 gender,age,studies,academic_year
-###Output
+#####Output
 
 For each case, you must print the list of students that match the input. If there are multiple results, print them in lexicographical order and separated by commas. If there are not matches, print “NONE”.
 
@@ -29,7 +29,7 @@ Use the following format:
 Case #Ti: Ri
 Where “Ti” is the case number and “Ri” is the result.
 
-###Sample input
+#####Sample input
 
 5
 M,21,Human Resources Management,3
@@ -37,7 +37,7 @@ F,20,Systems Engineering,2
 M,20,Manufacturing Engineering,3
 M,18,Electrical Engineering,4
 F,25,Construction Engineering,4
-###Sample output
+#####Sample output
 
 Case #1: NONE
 Case #2: Morgan Martinez Moore
