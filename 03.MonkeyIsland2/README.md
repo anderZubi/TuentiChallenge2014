@@ -1,4 +1,4 @@
-## Challenge 3 - The Gambler’s Club - Monkey Island 2 
+### Challenge 3 - The Gambler’s Club - Monkey Island 2 
 
 Guybrush Threepwood has found an illegal gambling wheel in an alley.
 
@@ -22,29 +22,30 @@ where you can ask him as many times as you want and he will give you the correct
 
 You need to solve the algorithm, so that when faced with the final test (he can provide inputs > 30), you tell him the correct solution or he won't give you the next winning number for the wheel!
 
-### Input
+##### Input
 
 The first line is N, N cases will follow.
 
 For each case, in a single line, whitespace-separated, X and Y, the inputs of the problem (X,Y < 1337)
 
-### Output
+##### Output
 
 N lines with the solution (apply the Gambler's Club algorithm to the input).
 
-### Sample input
-
+##### Sample input
+```
 5
 25 25
 12 8
 1 19
 123 37
 0 5
-
-### Sample output
-
+```
+##### Sample output
+```
 35.36
 14.42
 19.03
 128.44
 5
+```
