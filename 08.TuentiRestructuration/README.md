@@ -1,4 +1,4 @@
-###hallenge 8 - Tuenti Restructuration
+###Challenge 8 - Tuenti Restructuration
 
 Tuenti, which is well known as an awesome social network, decided to change its business model and create a mobile network company called Tuenti Móvil. Since all engineers don’t have the same technical knowledge, the company needs to move people around and put those who have different knowledge close together so they may learn from each other, benefit from peer programming, and even have romantic dinners.
 
