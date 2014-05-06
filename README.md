@@ -1,6 +1,6 @@
 ####Tuenti Challenge 2014
 
-My solutions to challenges from Tuenti Challenge 2014 that I was able to submit.
+My solutions to challenges from [Tuenti Challenge 2014] that I was able to submit.
 
 All of them, except #6 are written in C#
 
@@ -10,3 +10,4 @@ You are welcome to check the solutions and propose improvements.
 
 
 
+[Tuenti Challenge 2014]:http://contest.tuenti.net/Challenges
