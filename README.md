@@ -1,5 +1,4 @@
-Tuenti Challenge 2014
-=====================
+####Tuenti Challenge 2014
 
 My solutions to challenges from Tuenti Challenge 2014 that I was able to submit.
 
