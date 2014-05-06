@@ -5,7 +5,7 @@ After Bones returned from planet B3/S23 to the USS Enterprise, he rushed to the 
 – "Jim, I found a remarkable species on the planet! They're called Tribbles. Look at their reproductive patterns!"
 
 In the cage, Jim and Bones could see the animals spread out on the floor on a grid. They were quickly being born and dying, based on a proximity rule.
-
+```
 ---X--XX
 -X-XX---
 XXX---XX
@@ -14,7 +14,7 @@ X-X--XX-
 --XX--XX
 -X-X-X-X
 X-X-X-X-
-
+```
 Spock intervened: "Fascinating. They seem to be following the standard rules described by the earthling Dr John Conway."
 
 Bones added, "Damn it, I'm a doctor not a biologist. But don't you think that their position on the grid seems to follow a loop? Weren't they positioned like this a while ago? I wonder if we could predict it."
@@ -40,7 +40,7 @@ The grid is guaranteed to loop eventually before reaching generation 100. The gr
 First input example
 
 #####Input
-
+```
 X------X
 --------
 ---X----
@@ -49,14 +49,15 @@ X------X
 --------
 --------
 X------X
+```
 #####Output
-
+```
 1 2
-
+```
 Second example
 
 #####Input
-
+```
 XX----XX
 XX----XX
 --------
@@ -65,9 +66,11 @@ XX----XX
 --------
 XX----XX
 XX----XX
+```
 #####Output
-
+```
 0 1
+```
 #####Explanation of examples
 
 This means that for the first grid, a loop starts at generation 1 that repeats every 2 generations (i.e. the grid alternates between two states: generation 3 will look like 1, etc). For the second grid, the loop starts at generation 0 and repeats its pattern with every generation (i.e., the grid never changes).
