@@ -2,10 +2,11 @@
 
 Your university wants you to fill out an “anonymous” survey. There are many questions but some fields are mandatory:
 
-Gender
-Age
-Education
-Academic Year
+* Gender
+* Age
+* Education
+* Academic Year
+
 Are you sure this is really anonymous? If you have a list of all students and you ask them to take a random survey, you may be able to identify the students who complete the survey.
 
 The list of students is a text file. Each line has the information of a student in comma-separated values:
