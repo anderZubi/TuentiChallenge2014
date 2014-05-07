@@ -8,10 +8,10 @@ using System.Threading;
 
 namespace _11.Pheasant
 {
-    class ProgramC
+    class Program
     {
         static void Main(string[] args)
-        {
+        {  
             string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
             CreateAllCombinations(3, alphabet, "");
@@ -24,7 +24,8 @@ namespace _11.Pheasant
             {
                 foreach (var file in Directory.GetFiles(dir))
                 {
-                    int timestamp = int.Parse(File.ReadLines(file).First());
+
+                    int timestamp =  int.Parse(File.ReadLines(file).First());
 
                     int index = file.LastIndexOf('\\') + 1;
                     string user = file.Substring(index, file.LastIndexOf('.') - index);
@@ -33,7 +34,9 @@ namespace _11.Pheasant
                 }
             }
 
+
             string input = Console.ReadLine();
+
 
             List<List<string>> results = new List<List<string>>();
 
@@ -53,27 +56,29 @@ namespace _11.Pheasant
 
                 foreach (var f in friends)
                 {
-                    int timestamp = int.Parse(System.IO.File.ReadAllText(String.Format(@"..\last_times\{0}\{1}.timestamp", f.Key.Substring(f.Key.Length - 2), f.Key)));
+                    int timestamp = int.Parse(System.IO.File.ReadAllText(String.Format(@"D:\ander\SkyDrive\Proiektuak\Tuenti\201404.TuentiChallenge4\11.Pheasant\last_times\{0}\{1}.timestamp", f.Key.Substring(f.Key.Length - 2), f.Key)));
 
-                    string path = String.Format(@"..\encrypted\{0}\{1}.feed", f.Key.Substring(f.Key.Length - 2), f.Key);
-
-                    byte[] encryptedFile = System.IO.File.ReadAllBytes(path);
-
-                    string decryptedFile = "";
-
-                    foreach (var comb in combinations)
+                    if (eventList.Count < numEvents || timestamp > eventList.OrderByDescending(x => x.Timestamp).Select(x => x.Timestamp).Take(numEvents).Last())
                     {
-                        string decrypted = AES_Decrypt(encryptedFile, f.Value + comb);
 
-                        if (decrypted.StartsWith(f.Key))
+                        string path = String.Format(@"D:\ander\SkyDrive\Proiektuak\Tuenti\201404.TuentiChallenge4\11.Pheasant\encrypted\{0}\{1}.feed", f.Key.Substring(f.Key.Length - 2), f.Key);
+
+                        byte[] encryptedFile = System.IO.File.ReadAllBytes(path);
+
+                        string decryptedFile = "";
+
+                        foreach (var comb in combinations)
                         {
-                            decryptedFile = decrypted;
-                            break;
-                        }
-                    }
+                            string decrypted = AES_Decrypt(encryptedFile, f.Value + comb);
 
-                    if (!string.IsNullOrEmpty(decryptedFile))
-                    {
+                            if (decrypted.StartsWith(f.Key))
+                            {
+                                decryptedFile = decrypted;
+                                break;
+                            }
+                        }
+
+
 
                         string[] events = decryptedFile.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -84,6 +89,7 @@ namespace _11.Pheasant
                             eventList.Add(new Event { User = ev[0], Timestamp = int.Parse(ev[1]), Id = ev[2] });
                         }
                     }
+
                 }
 
                 results.Add(eventList.OrderByDescending(x => x.Timestamp).Select(x => x.Id).Take(numEvents).ToList());
@@ -92,18 +98,21 @@ namespace _11.Pheasant
 
             } while (!String.IsNullOrEmpty(input));
 
-            foreach (var r in results)
+            foreach(var r in results)
             {
                 Console.WriteLine(String.Join(" ", r));
             }
+
         }
 
         private class Event
         {
             public string User { get; set; }
-            public string Id { get; set; }
+            public string Id {get; set;}
             public int Timestamp { get; set; }
         }
+
+        // Code to create all combinations to complete keys
 
         static List<string> combinations = new List<string>();
 
