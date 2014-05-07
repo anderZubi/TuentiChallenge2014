@@ -18,7 +18,7 @@ namespace _11.Pheasant
 
             Dictionary<int, string> timestamps = new Dictionary<int, string>();
 
-            string timestampsPath = @"D:\ander\SkyDrive\Proiektuak\Tuenti\201404.TuentiChallenge4\11.Pheasant\last_times";
+            string timestampsPath = @"..\last_times";
 
             foreach (var dir in Directory.GetDirectories(timestampsPath))
             {
@@ -56,12 +56,12 @@ namespace _11.Pheasant
 
                 foreach (var f in friends)
                 {
-                    int timestamp = int.Parse(System.IO.File.ReadAllText(String.Format(@"D:\ander\SkyDrive\Proiektuak\Tuenti\201404.TuentiChallenge4\11.Pheasant\last_times\{0}\{1}.timestamp", f.Key.Substring(f.Key.Length - 2), f.Key)));
+                    int timestamp = int.Parse(System.IO.File.ReadAllText(String.Format(@"..\last_times\{0}\{1}.timestamp", f.Key.Substring(f.Key.Length - 2), f.Key)));
 
                     if (eventList.Count < numEvents || timestamp > eventList.OrderByDescending(x => x.Timestamp).Select(x => x.Timestamp).Take(numEvents).Last())
                     {
 
-                        string path = String.Format(@"D:\ander\SkyDrive\Proiektuak\Tuenti\201404.TuentiChallenge4\11.Pheasant\encrypted\{0}\{1}.feed", f.Key.Substring(f.Key.Length - 2), f.Key);
+                        string path = String.Format(@"..\encrypted\{0}\{1}.feed", f.Key.Substring(f.Key.Length - 2), f.Key);
 
                         byte[] encryptedFile = System.IO.File.ReadAllBytes(path);
 
